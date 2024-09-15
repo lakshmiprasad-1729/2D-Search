@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ChangeColorsOnInstance : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+        }
     }
 }
